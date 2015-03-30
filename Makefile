@@ -1,4 +1,4 @@
-EXECUTABLES = mpi_solved1 mpi_solved2 mpi_solved3 mpi_solved4 mpi_solved5 mpi_solved6 mpi_solved7
+EXECUTABLES = mpi_solved1 mpi_solved2 mpi_solved3 mpi_solved4 mpi_solved5 mpi_solved6 mpi_solved7 ssort
 COMPILER = mpicc
 FLAGS = -O3 -Wall -lrt
 
@@ -24,6 +24,9 @@ mpi_solved6: mpi_solved6.c
 
 mpi_solved7: mpi_solved7.c
 	$(COMPILER) $(FLAGS) mpi_solved7.c -o mpi_solved7 
+
+ssort: ssort.c
+	$(COMPILER) $(FLAGS) ssort.c -o ssort 
 
 clean:
 	rm -rf $(EXECUTABLES)
