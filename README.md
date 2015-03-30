@@ -2,4 +2,14 @@
 
 This is Fang's solution to HPC homework2
 
-mpirun -np 8 valgrind ./ssort 1000000
+#******************************************#
+to debug with valgrind:
+>> mpirun -np 8 valgrind ./ssort 1000000
+
+to login stampede:
+ssh XSEDEusername@login.xsede.org
+pwd...
+
+gsissh -p 2222 stampede.tacc.xsede.org
+
+(see https://portal.xsede.org/web/xup/single-sign-on-hub)
