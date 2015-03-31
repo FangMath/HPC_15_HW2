@@ -1,0 +1,135 @@
+TACC: Starting up job 5049436
+TACC: Setting up parallel environment for MVAPICH2+mpispawn.
+TACC: Starting parallel tasks...
+The total amount of integers to be sorted is 16384000.
+Each processor has 256000 integers.
+rank 0 received data chunk of size 255701 
+rank 1 received data chunk of size 256000 
+rank 63 received data chunk of size 256278 
+rank 62 received data chunk of size 256049 
+rank 4 received data chunk of size 256056 
+rank 3 received data chunk of size 256028 
+rank 7 received data chunk of size 256023 
+rank 12 received data chunk of size 256011 
+rank 10 received data chunk of size 255990 
+rank 55 received data chunk of size 256087 
+rank 61 received data chunk of size 255923 
+rank 60 received data chunk of size 256028 
+rank 51 received data chunk of size 255981 
+rank 52 received data chunk of size 255985 
+rank 49 received data chunk of size 255994 
+rank 9 received data chunk of size 255956 
+rank 15 received data chunk of size 255972 
+rank 8 received data chunk of size 255986 
+rank 14 received data chunk of size 256067 
+rank 5 received data chunk of size 255972 
+rank 13 received data chunk of size 255968 
+rank 11 received data chunk of size 256013 
+rank 2 received data chunk of size 255963 
+rank 6 received data chunk of size 255998 
+rank 59 received data chunk of size 255999 
+rank 57 received data chunk of size 256013 
+rank 56 received data chunk of size 255960 
+rank 53 received data chunk of size 256029 
+rank 48 received data chunk of size 255984 
+rank 58 received data chunk of size 255999 
+rank 50 received data chunk of size 256022 
+rank 54 received data chunk of size 255950 
+rank 32 received data chunk of size 256049 
+rank 44 received data chunk of size 255982 
+rank 40 received data chunk of size 255994 
+rank 33 received data chunk of size 255943 
+rank 47 received data chunk of size 256037 
+rank 42 received data chunk of size 255964 
+rank 45 received data chunk of size 256021 
+rank 43 received data chunk of size 255991 
+rank 46 received data chunk of size 255982 
+rank 39 received data chunk of size 256026 
+rank 36 received data chunk of size 256019 
+rank 41 received data chunk of size 256037 
+rank 34 received data chunk of size 255971 
+rank 37 received data chunk of size 255971 
+rank 35 received data chunk of size 256021 
+rank 38 received data chunk of size 256006 
+rank 30 received data chunk of size 256014 
+rank 28 received data chunk of size 256067 
+rank 29 received data chunk of size 255948 
+rank 31 received data chunk of size 255988 
+rank 24 received data chunk of size 256044 
+rank 17 received data chunk of size 256025 
+rank 25 received data chunk of size 255946 
+rank 19 received data chunk of size 255957 
+rank 26 received data chunk of size 256045 
+rank 20 received data chunk of size 256023 
+rank 18 received data chunk of size 256014 
+rank 16 received data chunk of size 255996 
+rank 23 received data chunk of size 256005 
+rank 27 received data chunk of size 255950 
+rank 21 received data chunk of size 256010 
+rank 22 received data chunk of size 255969 
+Task 9 time(wall)= 0.180494 sec
+Task 8 time(wall)= 0.180637 sec
+Task 14 time(wall)= 0.180543 sec
+Task 10 time(wall)= 0.180265 sec
+Task 15 time(wall)= 0.180279 sec
+Task 37 time(wall)= 0.179698 sec
+Task 33 time(wall)= 0.179760 sec
+Task 36 time(wall)= 0.179560 sec
+Task 39 time(wall)= 0.179745 sec
+Task 40 time(wall)= 0.179574 sec
+Task 38 time(wall)= 0.179770 sec
+Task 44 time(wall)= 0.179465 sec
+Task 45 time(wall)= 0.179540 sec
+Task 46 time(wall)= 0.179591 sec
+Task 35 time(wall)= 0.179927 sec
+Task 41 time(wall)= 0.179483 sec
+Task 42 time(wall)= 0.179712 sec
+Task 43 time(wall)= 0.179366 sec
+Task 47 time(wall)= 0.179498 sec
+Task 32 time(wall)= 0.179786 sec
+Task 4 time(wall)= 0.180503 sec
+Task 3 time(wall)= 0.180225 sec
+Task 0 time(wall)= 0.180714 sec
+Task 12 time(wall)= 0.180761 sec
+Task 5 time(wall)= 0.180590 sec
+Task 13 time(wall)= 0.180634 sec
+Task 2 time(wall)= 0.180460 sec
+Task 6 time(wall)= 0.180537 sec
+Task 1 time(wall)= 0.180539 sec
+Task 7 time(wall)= 0.180318 sec
+Task 11 time(wall)= 0.180516 sec
+Task 20 time(wall)= 0.178840 sec
+Task 28 time(wall)= 0.178696 sec
+Task 26 time(wall)= 0.179155 sec
+Task 22 time(wall)= 0.178893 sec
+Task 16 time(wall)= 0.179089 sec
+Task 23 time(wall)= 0.179202 sec
+Task 24 time(wall)= 0.178924 sec
+Task 21 time(wall)= 0.178883 sec
+Task 27 time(wall)= 0.179160 sec
+Task 29 time(wall)= 0.178783 sec
+Task 18 time(wall)= 0.178800 sec
+Task 25 time(wall)= 0.179103 sec
+Task 19 time(wall)= 0.178658 sec
+Task 30 time(wall)= 0.178761 sec
+Task 31 time(wall)= 0.178768 sec
+Task 17 time(wall)= 0.178673 sec
+Task 34 time(wall)= 0.179858 sec
+Task 54 time(wall)= 0.179602 sec
+Task 61 time(wall)= 0.179429 sec
+Task 63 time(wall)= 0.179351 sec
+Task 60 time(wall)= 0.179524 sec
+Task 62 time(wall)= 0.179341 sec
+Task 59 time(wall)= 0.179610 sec
+Task 52 time(wall)= 0.179453 sec
+Task 49 time(wall)= 0.179411 sec
+Task 53 time(wall)= 0.179601 sec
+Task 56 time(wall)= 0.179583 sec
+Task 58 time(wall)= 0.179540 sec
+Task 50 time(wall)= 0.179633 sec
+Task 57 time(wall)= 0.179400 sec
+Task 51 time(wall)= 0.179788 sec
+Task 55 time(wall)= 0.179462 sec
+Task 48 time(wall)= 0.179727 sec
+ 
+TACC: Shutdown complete. Exiting.

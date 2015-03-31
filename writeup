@@ -1,0 +1,25 @@
+Bug1: The tag of message sent/received is not consistent. I modified the tag
+to be tag=rank of the sending processor.
+
+Bug2: The data type of message sent/received does not match. I modified the
+data type received to be MPI_INT.
+
+Bug3: The MPI environement isn't initialized and terminated by MPI_Init and
+MPI_finalize functions respectively.
+
+Bug4: The Master task doesn't call MPI_Reduce so that it is not included in
+the MPI environment.
+
+Bug5: The number of message sent is infinite, i.e. there is an infinite loop
+of sending messages. I modified that the number of communications
+is 500.
+
+Bug6: It messed up the MPI_Wait. I changed the MPI_Waitall for all
+non-blocking operations to single wait operations.
+
+Bug7: **count = 1; is the length of data being broadcasted.
+
+
+Problem 2:
+Set the total number to be sorted be 1e6 and run the sample sorting of stampede, with different number of coresh
+

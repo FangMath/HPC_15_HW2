@@ -39,11 +39,13 @@ int main( int argc, char *argv[])
   root = 0;
 
   /******** sort starts, time it ************/
+  MPI_Barrier(MPI_COMM_WORLD);
   T1 = MPI_Wtime();     /* start the clock */
 
   /* Number of random numbers per processor (this should be increased
    * for actual tests or could be passed in through the command line */
-  totalN = (atoi(argv[1])/P)*P;
+  N = atoi(argv[1]);
+  totalN = N*P;
   N = totalN/P;
   if (rank == 0){
   printf("The total amount of integers to be sorted is %d.\n", totalN);
@@ -152,6 +154,7 @@ int main( int argc, char *argv[])
   qsort(newvec, newN, sizeof(int), compare);
 
   /******** sort is done, time it again ************/
+  MPI_Barrier(MPI_COMM_WORLD);
   T2 = MPI_Wtime();     /* end time */
   printf("Task %d time(wall)= %lf sec\n", rank, T2-T1);
 
