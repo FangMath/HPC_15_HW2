@@ -59,7 +59,6 @@ int main( int argc, char *argv[])
   for (i = 0; i < N; ++i) {
     vec[i] = rand();
   }
-  printf("rank: %d, first entry: %d\n", rank, vec[0]);
 
   /* sort locally */
   qsort(vec, N, sizeof(int), compare);
@@ -89,7 +88,6 @@ int main( int argc, char *argv[])
   for (i = 1; i < P; ++i) {
       splitter[i-1] = PSvec[(i*(P*S-1))/P];
   }
-  for (i = 0; i < P-1; ++i) printf("Spritter %d is %d \n", i, splitter[i]);
   }
 
   /* root process broadcasts splitters */
@@ -150,7 +148,7 @@ int main( int argc, char *argv[])
   MPI_Alltoallv(vec, sendcnts, sdispls, MPI_INT, newvec, recvcnts, rdispls, MPI_INT, MPI_COMM_WORLD);
 
   /* do a local sort */
-  for (i = 0; i < P; ++i) printf("rank %d received data chunk of size %d \n", rank, newN);
+  printf("rank %d received data chunk of size %d \n", rank, newN);
   qsort(newvec, newN, sizeof(int), compare);
 
   /******** sort is done, time it again ************/
@@ -161,7 +159,7 @@ int main( int argc, char *argv[])
   {
     FILE* fd = NULL;
     char filename[256];
-    snprintf(filename, 256, "ssort%02d.txt", rank);
+    snprintf(filename, 256, "./output/ssort%02d.txt", rank);
     fd = fopen(filename,"w+");
 
     if(NULL == fd)
