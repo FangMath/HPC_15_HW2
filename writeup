@@ -1,3 +1,8 @@
+HPC homework2 -- Fang Fang
+
+------------------------------
+Problem 1: Finding bugs 
+
 Bug1: The tag of message sent/received is not consistent. I modified the tag
 to be tag=rank of the sending processor.
 
@@ -19,9 +24,11 @@ non-blocking operations to single wait operations.
 
 Bug7: **count = 1; is the length of data being broadcasted.
 
-
+------------------------------
 Problem 2:
 Set the N (the number of integers sorted by each prossesor) be from 1000*2^k where k = 0,1,...,11. For N is small (N<512000), the relation dependence of timings on N is not very clear. For N that is large (N>512000), the timing doubles as N doubles. 
 
-Project: Simulation of multiple flapping wings using parallel computing
+------------------------------
+Project: Simulation of multiple flapping wings using openMP
 
+We use a vortex sheet model to simulation the collective behavior of multiple flapping wings swimming in high Reynold number fluid. The wings are freely moving subject to the hydrodynamic force. As each wing flaps, a vortex sheet is shedded from the wing trailing edge, and interacts with all the flappers. At each time step, the vortex sheets are updated explicitly, followed by an implicit solver of the flapping bodies. The analysis of current algorithm shows a major computing cost lies in the serial updating of multiple vortes sheets. Here we want to use openMP to update each vortex sheet individually on single thread, parallelly, which is expected to give a significant speed improvement.  
