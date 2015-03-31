@@ -37,6 +37,8 @@ int main( int argc, char *argv[])
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Comm_size(MPI_COMM_WORLD, &P);
   root = 0;
+
+  /******** sort starts, time it ************/
   T1 = MPI_Wtime();     /* start the clock */
 
   /* Number of random numbers per processor (this should be increased
@@ -121,7 +123,6 @@ int main( int argc, char *argv[])
       sendcnts[i] = chunk[i] - chunk[i-1];
   }
   sendcnts[P-1] = N - chunk[P-2];
-  //for (i = 0; i < P; ++i) printf("rank %d, i = %d sendcnts %d\t", rank, i, sendcnts[i]);
 
   /* set send displacements */
   sdispls = calloc(P, sizeof(int));
@@ -149,7 +150,12 @@ int main( int argc, char *argv[])
   MPI_Alltoallv(vec, sendcnts, sdispls, MPI_INT, newvec, recvcnts, rdispls, MPI_INT, MPI_COMM_WORLD);
 
   /* do a local sort */
+  for (i = 0; i < P; ++i) printf("rank %d received data chunk of size %d \n", rank, newN);
   qsort(newvec, newN, sizeof(int), compare);
+
+  /******** sort is done, time it again ************/
+  T2 = MPI_Wtime();     /* end time */
+  printf("Task %d time(wall)= %lf sec\n", rank, T2-T1);
 
   /* every processor writes its result to a file */
   {
@@ -182,8 +188,6 @@ int main( int argc, char *argv[])
   free(recvcnts);
   free(rdispls);
 
-  T2 = MPI_Wtime();     /* end time */
-  printf("Task %d time(wall)= %lf sec\n", rank, T2-T1);
 
   MPI_Finalize();
   return 0;

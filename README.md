@@ -15,3 +15,11 @@ gsissh -p 2222 stampede.tacc.xsede.org
 
 * Second time login
 ssh tg827502@stampede.tacc.utexas.edu
+
+sbatch job
+
+squeue -u tg827502
+scancel jobnumber
+
+results/error messages are in xxx.o file
+
