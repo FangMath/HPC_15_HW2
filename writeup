@@ -21,5 +21,7 @@ Bug7: **count = 1; is the length of data being broadcasted.
 
 
 Problem 2:
-Set the total number to be sorted be 1e6 and run the sample sorting of stampede, with different number of coresh
+Set the N (the number of integers sorted by each prossesor) be from 1000*2^k where k = 0,1,...,11. For N is small (N<512000), the relation dependence of timings on N is not very clear. For N that is large (N>512000), the timing doubles as N doubles. 
+
+Project: Simulation of multiple flapping wings using parallel computing
 
