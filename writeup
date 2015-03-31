@@ -26,7 +26,9 @@ Bug7: **count = 1; is the length of data being broadcasted.
 
 ------------------------------
 Problem 2:
-Set the N (the number of integers sorted by each prossesor) be from 1000*2^k where k = 0,1,...,11. For N is small (N<512000), the relation dependence of timings on N is not very clear. For N that is large (N>512000), the timing doubles as N doubles. 
+Set the N (the number of integers sorted by each prossesor) be from 1000*2^k where k = 0,1,...,11. For N is small (N<512000), the relation dependence of timings on N is not very clear. For N that is large (N>512000), the timing doubles as N doubles.
+
+The fang*.o output files are saved in the output/ directory. And a hw2_prob2_plot.png figure is included here showing the timings. 
 
 ------------------------------
 Project: Simulation of multiple flapping wings using openMP
